@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Clinical | Premium Research Peptides</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'clinical-blue': '#0083B0',
+                        'clinical-blue-hover': '#00B4DB',
+                        'clinical-light-gray': '#F8FAFC',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-slate-900 antialiased overflow-x-hidden">
+
+    <!-- 21+ Age Gate & Compliance Overlay -->
+    <div id="age-gate" class="fixed inset-0 bg-white/95 backdrop-blur-md z-50 flex flex-col items-center justify-center p-6 text-center select-none">
+        <div class="max-w-md bg-white p-8 rounded-2xl shadow-2xl border border-slate-100 relative transform transition-all duration-300 floating">
+            <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 border border-blue-100">
+                <i class="fa-solid fa-shield-halved text-clinical-blue text-2xl"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-slate-900 mb-2">Age Verification</h2>
+            <p class="text-slate-600 mb-6 text-sm leading-relaxed">
+                Are you 21 or older? By entering, you agree that all products are strictly for <span class="font-bold text-clinical-blue">Research Use Only (RUO)</span> and NOT for human consumption.
+            </p>
+            <div class="flex gap-4">
+                <button id="enter-btn" class="flex-1 bg-gradient-to-r from-clinical-blue to-cyan-500 hover:opacity-90 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 shadow-md">I Agree (Enter)</button>
+                <button id="exit-btn" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold py-3 px-6 rounded-xl transition-all duration-300 border border-slate-200">Exit</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Minimalist Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-40 border-b border-slate-100 h-20 flex items-center justify-between px-8 md:px-24">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-clinical-blue to-cyan-400 flex items-center justify-center">
+                <i class="fa-solid fa-vial text-white text-sm"></i>
+            </div>
+            <span class="text-xl font-extrabold tracking-tight text-slate-900 font-sans">NEXUS<span class="text-clinical-blue">CLINICAL</span></span>
+        </div>
+        <div><a href="#catalog" class="bg-gradient-to-r from-clinical-blue to-cyan-500 hover:shadow-md text-white font-bold py-2.5 px-6 rounded-lg transition-all duration-300 text-sm">Order Supplies</a></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen pt-24 flex flex-col items-center justify-center px-8 bg-slate-50 relative overflow-hidden text-center">
+        <!-- Giant Watermark Background Text -->
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none -z-10"><span class="outline-text text-[150px] md:text-[300px] opacity-20">NEXUS</span></div>
+
+        <div class="max-w-4xl mx-auto z-10 relative mt-12 md:mt-0">
+            <span class="inline-flex items-center gap-2 bg-white text-clinical-blue text-xs font-bold px-4 py-2 rounded-full mb-6 border border-slate-200 shadow-sm mx-auto">
+                 <i class="fa-solid fa-atom animate-spin text-[10px]"></i> USA-MADE CGMP LABS
+            </span>
+            <h1 class="text-4xl md:text-[68px] font-extrabold text-slate-900 font-sans leading-[1.05] tracking-tight mb-6">Purity Without Compromise.<br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-clinical-blue to-cyan-500">Research Without Limits.</span></h1>
+            <p class="text-base md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">Supplying verified high-purity research compounds. Precision Lyophilized for maximum analytic stability setup.</p>
+            <div class="flex items-center justify-center gap-4 flex-wrap mb-16">
+                <a href="#catalog" class="btn-gradient text-white hover:shadow-lg font-bold py-4 px-10 rounded-xl shadow-md text-base">Explore Premium Catalog</a>
+                <a href="#showcase" class="bg-white hover:bg-slate-50 text-slate-700 font-bold py-4 px-10 rounded-xl shadow-sm border border-slate-200 text-base transition-all duration-300">Analytical Verification</a>
+            </div>
+        </div>
+
+        <div class="max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10 items-end px-6 md:h-[180px]">
+            <!-- Card 1 -->
+            <div class="glass-clinical p-4 rounded-xl clinical-shadow animate-float-reverse order-2 md:order-1 h-fit text-left">
+                <div class="flex items-center gap-3 mb-2"><i class="fa-solid fa-bolt text-clinical-blue text-sm"></i><span class="font-bold text-slate-800 text-xs">Purity Verification</span></div>
+                <div class="text-xl font-black text-slate-900">99.85% <span class="text-xs text-slate-400 font-medium">Batch 44A</span></div>
+            </div>
+            <!-- Center core vial pedestal -->
+            <div class="flex justify-center flex-col items-center order-1 md:order-2">
+                 <div class="relative w-72 h-72 flex items-center justify-center transform scale-105 md:scale-110">
+                     <div class="absolute w-52 h-52 bg-blue-100 rounded-full filter blur-3xl opacity-70"></div>
+                     <img src="images/vial_showcase.png" alt="High End Peptide" class="animate-float aspect-square object-contain drop-shadow-2xl max-w-[240px] md:max-w-none">
+                 </div>
+            </div>
+             <!-- Card 2 -->
+            <div class="glass-clinical p-4 rounded-xl clinical-shadow animate-float order-3 h-fit text-left">
+                <div class="flex items-center gap-3 mb-2"><i class="fa-solid fa-snowflake text-clinical-blue text-sm"></i><span class="font-bold text-slate-800 text-xs">Stability Index</span></div>
+                <div class="text-xl font-black text-slate-900">Lyophilized <span class="text-xs text-slate-400 font-medium">-20°C Rated</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Credibility Bar -->
+    <section class="bg-slate-50 border-y border-slate-100 py-12 px-8 md:px-24"><div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6"><div class="flex items-center gap-4 bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 scroll-reveal"><div class="w-12 h-12 flex items-center justify-center bg-blue-50 rounded-lg text-clinical-blue text-xl"><i class="fa-solid fa-flask-vial"></i></div><div><h3 class="font-bold text-slate-900 text-sm">3rd Party HPLC</h3><p class="text-slate-500 text-xs mt-1">Independent Verified</p></div></div><div class="flex items-center gap-4 bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 scroll-reveal"><div class="w-12 h-12 flex items-center justify-center bg-blue-50 rounded-lg text-clinical-blue text-xl"><i class="fa-solid fa-award"></i></div><div><h3 class="font-bold text-slate-900 text-sm">99%+ Purity</h3><p class="text-slate-500 text-xs mt-1">In-house validation</p></div></div><div class="flex items-center gap-4 bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 scroll-reveal"><div class="w-12 h-12 flex items-center justify-center bg-blue-50 rounded-lg text-clinical-blue text-xl"><i class="fa-solid fa-lock"></i></div><div><h3 class="font-bold text-slate-900 text-sm">Secure Billing</h3><p class="text-slate-500 text-xs mt-1">Encrypted processing</p></div></div><div class="flex items-center gap-4 bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 scroll-reveal"><div class="w-12 h-12 flex items-center justify-center bg-blue-50 rounded-lg text-clinical-blue text-xl"><i class="fa-solid fa-flag-usa"></i></div><div><h3 class="font-bold text-slate-900 text-sm">Made in USA</h3><p class="text-slate-500 text-xs mt-1">Formulated in CGMP</p></div></div></div></section>
+
+    <!-- 🌟 NEW: SCIENTIFIC VERIFICATION PIPELINE MOTION GRAPHIC 🌟 -->
+    <section id="pipeline" class="py-24 px-8 md:px-24 bg-white">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <!-- Left: Automatic Timeline Steps (Cycles in loops via main.js) -->
+            <div class="scroll-reveal">
+                 <span class="text-clinical-blue text-xs font-bold tracking-wider uppercase mb-2 block">Quality Dashboard</span>
+                 <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 font-sans tracking-tight mb-6">The Purity Analytics Pipeline</h2>
+                 <p class="text-slate-500 mb-8 text-sm leading-relaxed max-w-md">Our testing pipeline replicates analytical environments in real-time. Continuous verification loops locked before dispatch batches formulate.</p>
+
+                 <div class="flex flex-col gap-4">
+                      <!-- Step 1 -->
+                      <div class="pipeline-step-item p-4 rounded-xl border border-slate-100 flex items-center gap-4 cursor-pointer transition-all duration-300 hover:shadow-sm" data-step="1">
+                           <div class="step-num w-10 h-10 rounded-lg font-bold flex items-center justify-center bg-slate-100 text-slate-400 transition-all duration-300">01</div>
+                           <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Lyophilization Pre-mix</h4>
+                                <p class="text-slate-500 text-xs">Compound stabilization & crystalline micro-powdering</p>
+                           </div>
+                      </div>
+                      <!-- Step 2 -->
+                      <div class="pipeline-step-item p-4 rounded-xl border border-slate-100 flex items-center gap-4 cursor-pointer transition-all duration-300 hover:shadow-sm" data-step="2">
+                           <div class="step-num w-10 h-10 rounded-lg font-bold flex items-center justify-center bg-slate-100 text-slate-400 transition-all duration-300">02</div>
+                           <div>
+                                <h4 class="font-bold text-slate-900 text-sm">HPLC Column Extraction</h4>
+                                <p class="text-slate-500 text-xs">High-Gradient separation pumped at 3,500 PSI setups</p>
+                           </div>
+                      </div>
+                      <!-- Step 3 -->
+                      <div class="pipeline-step-item p-4 rounded-xl border border-slate-100 flex items-center gap-4 cursor-pointer transition-all duration-300 hover:shadow-sm" data-step="3">
+                           <div class="step-num w-10 h-10 rounded-lg font-bold flex items-center justify-center bg-slate-100 text-slate-400 transition-all duration-300">03</div>
+                           <div>
+                                <h4 class="font-bold text-slate-900 text-sm">LC-MS Deflector Match</h4>
+                                <p class="text-slate-500 text-xs">Mass Deflection weighing precise molecular frames</p>
+                           </div>
+                      </div>
+                      <!-- Step 4 -->
+                      <div class="pipeline-step-item p-4 rounded-xl border border-slate-100 flex items-center gap-4 cursor-pointer transition-all duration-300 hover:shadow-sm" data-step="4">
+                           <div class="step-num w-10 h-10 rounded-lg font-bold flex items-center justify-center bg-slate-100 text-slate-400 transition-all duration-300">04</div>
+                           <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Purity Certification</h4>
+                                <p class="text-slate-500 text-xs">Validating index limits hitting 99.8%+ benchmark score</p>
+                           </div>
+                      </div>
+                 </div>
+            </div>
+
+            <!-- Right: Dynamic Visual Viewport (Motion Graphic framing) -->
+            <div class="relative h-[400px] bg-slate-950 rounded-3xl overflow-hidden shadow-2xl flex items-center justify-center p-8 scroll-reveal">
+                 <!-- Grid base overlays -->
+                 <div class="absolute inset-0 bg-slate-900/80 pointer-events-none"></div>
+                 <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#00B4DB_1px,transparent_1px)] [background-size:16px_16px]"></div>
+
+                 <!-- View Step 1: Formulation Particle Orbit -->
+                 <div class="pipeline-view-item absolute flex flex-col items-center justify-center text-center transition-all duration-500" data-step="1">
+                      <div class="relative w-24 h-24 mb-4">
+                           <div class="absolute inset-0 border-2 border-dashed border-cyan-400/40 rounded-full animate-spin"></div>
+                           <div class="absolute w-4 h-4 bg-cyan-400 rounded-full animate-orbit"></div>
+                           <div class="absolute inset-4 bg-cyan-400/10 rounded-full flex items-center justify-center neon-glow">
+                                <i class="fa-solid fa-atom text-2xl text-cyan-400"></i>
+                           </div>
+                      </div>
+                      <h4 class="text-white font-bold text-lg">Atomizing Mixture</h4>
+                      <p class="text-slate-400 text-xs max-w-xs mt-1">Solving molecular crystalline bindings before analytics injection.</p>
+                 </div>
+
+                 <!-- View Step 2: HPLC Wave Continuous Draw -->
+                 <div class="pipeline-view-item absolute hidden flex-col items-center justify-center text-center transition-all duration-500" data-step="2">
+                      <svg width="280" height="120" viewBox="0 0 280 120" class="neon-glow mb-4">
+                           <path d="M 0 80 Q 70 80 100 80 T 140 20 T 180 80 Q 250 80 280 80" fill="none" stroke="#00B4DB" stroke-width="3" stroke-dasharray="300" stroke-dashoffset="300" class="dash-draw" />
+                      </svg>
+                      <h4 class="text-white font-bold text-lg">HPLC Gradient Separation</h4>
+                      <p class="text-slate-400 text-xs max-w-xs mt-1">Pumping solutions with gradient mesh deflections framing peaks.</p>
+                 </div>
+
+                 <!-- View Step 3: Mass Deflector Stream particles -->
+                 <div class="pipeline-view-item absolute hidden flex-col items-center justify-center text-center transition-all duration-500" data-step="3">
+                      <div class="flex items-center gap-2 mb-4">
+                           <div class="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-ping"></div>
+                           <div class="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-ping [animation-delay:0.3s]"></div>
+                           <div class="w-2.5 h-2.5 bg-cyan-400 rounded-full animate-ping [animation-delay:0.6s]"></div>
+                      </div>
+                      <div class="w-48 h-[2px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent mb-4 neon-glow"></div>
+                      <h4 class="text-white font-bold text-lg">Mass Spectrometry Sweep</h4>
+                      <p class="text-slate-400 text-xs max-w-xs mt-1">Calibrating deflection spectra matching heavy absolute chains.</p>
+                 </div>
+
+                 <!-- View Step 4: Digital Reads Counter -->
+                 <div class="pipeline-view-item absolute hidden flex-col items-center justify-center text-center transition-all duration-500" data-step="4">
+                      <div id="purity-counter" class="text-5xl font-black text-cyan-400 mb-2 neon-glow">0%</div>
+                      <div class="bg-emerald-500/10 text-emerald-400 text-[10px] font-bold px-3 py-1 rounded-full border border-emerald-500/30 mb-2">VALIDATED PASS</div>
+                      <h4 class="text-white font-bold text-lg">Certificate Batch Release</h4>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Catalog Grid -->
+    <section id="catalog" class="py-24 px-8 md:px-24 bg-slate-50 relative"><div class="max-w-6xl mx-auto text-center mb-16 scroll-reveal"><span class="text-clinical-blue text-xs font-bold tracking-wider uppercase mb-2 block">Enterprise Supplier</span><h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 font-sans tracking-tight mb-4">Laboratory Reagent Catalog</h2><p class="text-slate-500 max-w-xl mx-auto text-sm leading-relaxed">Browse verified high-purity research compounds with individual batch verify integrity triggers direct via HPLC setup logs.</p></div><div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"><div class="product-card-wrap bg-white p-6 rounded-2xl border border-slate-200/60 relative overflow-hidden flex flex-col justify-between scroll-reveal"><div class="absolute back-glow w-40 h-40 bg-clinical-blue/20 left-10 top-10"></div><div class="relative z-10"><div class="flex items-center justify-between mb-4"><span class="bg-slate-50 text-[10px] font-bold text-clinical-blue border border-slate-100 px-2 py-1 rounded-full">IN STOCK</span><span class="text-xs font-bold text-slate-400">#NEX-157</span></div><div class="relative aspect-[4/3] flex items-center justify-center mb-4 bg-slate-50 rounded-xl overflow-hidden shadow-inner"><img src="images/vial_showcase.png" alt="BPC 157" class="h-4/5 object-contain"></div><h3 class="font-extrabold text-xl font-sans text-slate-900 mb-1">BPC-157</h3><p class="text-xs text-slate-500 mb-2">Lyophilized Peptide • 5mg Vial</p><div class="flex items-center gap-1 text-emerald-600 text-[11px] font-bold mb-4"><i class="fa-solid fa-certificate"></i> 99.82% Certified Purity</div></div><div class="relative z-10 pt-4 border-t border-slate-200/50 flex items-center justify-between"><div><span class="text-[10px] text-slate-400">Reagent Supply</span><div class="font-extrabold text-lg text-slate-900">$45.00</div></div><button class="bg-gradient-to-r from-clinical-blue to-cyan-500 text-white text-xs font-bold px-5 py-2.5 rounded-lg transition-transform duration-300 hover:scale-[1.02]">Order</button></div></div><div class="product-card-wrap bg-white p-6 rounded-2xl border border-slate-200/60 relative overflow-hidden flex flex-col justify-between scroll-reveal"><div class="absolute back-glow w-40 h-40 bg-clinical-blue/20 left-10 top-10"></div><div class="relative z-10"><div class="flex items-center justify-between mb-4"><span class="bg-slate-50 text-[10px] font-bold text-clinical-blue border border-slate-100 px-2 py-1 rounded-full">IN STOCK</span><span class="text-xs font-bold text-slate-400">#NEX-500</span></div><div class="relative aspect-[4/3] flex items-center justify-center mb-4 bg-slate-50 rounded-xl overflow-hidden shadow-inner"><img src="images/vial_showcase.png" alt="TB 500" class="h-4/5 object-contain transform -scale-x-100"></div><h3 class="font-extrabold text-xl font-sans text-slate-900 mb-1">TB-500</h3><p class="text-xs text-slate-500 mb-2">Tissue Recovery • 10mg Vial</p><div class="flex items-center gap-1 text-emerald-600 text-[11px] font-bold mb-4"><i class="fa-solid fa-certificate"></i> 99.78% Certified Purity</div></div><div class="relative z-10 pt-4 border-t border-slate-200/50 flex items-center justify-between"><div><span class="text-[10px] text-slate-400">Reagent Supply</span><div class="font-extrabold text-lg text-slate-900">$55.00</div></div><button class="bg-gradient-to-r from-clinical-blue to-cyan-500 text-white text-xs font-bold px-5 py-2.5 rounded-lg transition-transform duration-300 hover:scale-[1.02]">Order</button></div></div><div class="product-card-wrap bg-white p-6 rounded-2xl border border-slate-200/60 relative overflow-hidden flex flex-col justify-between scroll-reveal"><div class="absolute back-glow w-40 h-40 bg-clinical-blue/20 left-10 top-10"></div><div class="relative z-10"><div class="flex items-center justify-between mb-4"><span class="bg-slate-50 text-[10px] font-bold text-clinical-blue border border-slate-100 px-2 py-1 rounded-full">IN STOCK</span><span class="text-xs font-bold text-slate-400">#NEX-1295</span></div><div class="relative aspect-[4/3] flex items-center justify-center mb-4 bg-slate-50 rounded-xl overflow-hidden shadow-inner"><img src="images/vial_showcase.png" alt="CJC 1295" class="h-4/5 object-contain"></div><h3 class="font-extrabold text-xl font-sans text-slate-900 mb-1">CJC-1295 + Ipamorelin</h3><p class="text-xs text-slate-500 mb-2">Dual Compound • 10mg Total</p><div class="flex items-center gap-1 text-emerald-600 text-[11px] font-bold mb-4"><i class="fa-solid fa-certificate"></i> 99.91% Certified Purity</div></div><div class="relative z-10 pt-4 border-t border-slate-200/50 flex items-center justify-between"><div><span class="text-[10px] text-slate-400">Reagent Supply</span><div class="font-extrabold text-lg text-slate-900">$75.00</div></div><button class="bg-gradient-to-r from-clinical-blue to-cyan-500 text-white text-xs font-bold px-5 py-2.5 rounded-lg transition-transform duration-300 hover:scale-[1.02]">Order</button></div></div></div></section>
+
+    <!-- Data Showcase Section -->
+    <section id="showcase" class="py-24 px-8 md:px-24 bg-white"><div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"><div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 relative flex items-center justify-center group shadow-sm scroll-reveal"><div class="absolute top-4 left-4 bg-white text-clinical-blue text-[10px] font-extrabold px-3 py-1 rounded-full border border-slate-100">SAMPLE BATCH AA24</div><img src="images/vial_showcase.png" alt="Peptide Vial Details" class="max-w-sm drop-shadow-xl group-hover:scale-105 transition-all duration-500"><div class="absolute bottom-6 right-6 bg-white/90 backdrop-blur-sm p-3 rounded-lg border border-slate-100 flex items-center gap-2 clinical-shadow"><div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div><span class="text-slate-800 text-xs font-bold">99.85% Certified Purity</span></div></div><div class="scroll-reveal"><span class="text-clinical-blue text-xs font-bold tracking-wider uppercase mb-3 block">ANALYTICAL RIGOR</span><h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-sans tracking-tight mb-4">Trust Through Data Transparency</h2><p class="text-slate-600 mb-6 leading-relaxed text-sm">Every batch is run through advanced HPLC mass spectrometry verified setups with visual transparency reporting.</p><div class="bg-white rounded-2xl border border-slate-100 overflow-hidden clinical-shadow p-6"><div class="flex items-center justify-between mb-4 border-b border-slate-100 pb-3"><div><span class="text-[10px] font-bold text-slate-400">COA REPORT</span><h4 class="text-slate-900 font-bold text-sm">Batch #B-919: IGF-1 LR3 Purity</h4></div><span class="text-[10px] bg-emerald-50 text-emerald-600 font-extrabold px-2 py-1 rounded-full">PASSED</span></div><div class="relative w-full aspect-video rounded-xl bg-slate-50 overflow-hidden flex items-center justify-center"><img src="images/hplc_graph.png" alt="HPLC Graph" class="absolute inset-0 w-full h-full object-cover p-2"></div></div></div></div></section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12 px-8 md:px-24"><div class="max-w-6xl mx-auto"><div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 pb-8 border-b border-slate-800"><div><div class="flex items-center gap-2 mb-4"><div class="w-6 h-6 rounded bg-gradient-to-br from-clinical-blue to-cyan-400 flex items-center justify-center"><i class="fa-solid fa-vial text-white text-xs"></i></div><span class="text-base font-bold tracking-tight font-sans">NEXUS<span class="text-clinical-blue">CLINICAL</span></span></div><p class="text-slate-500 text-xs max-w-sm leading-relaxed">Supplying premium reagents to verified analytical study spaces correctly setup to standards.</p></div><div class="text-right flex flex-col items-end justify-end"><span class="text-[10px] text-slate-500">© 2026 Nexus Clinical. All rights reserved.</span></div></div><div class="bg-slate-800/40 border border-slate-800 rounded-xl p-5 text-[11px] text-slate-400 leading-relaxed"><div class="flex items-center gap-2 text-amber-400 font-bold mb-2 text-xs"><i class="fa-solid fa-triangle-exclamation"></i><span>LEGAL COMPLIANCE DISCLAIMER</span></div>The products offered are intended for laboratory research use only. NOT intended for use as food additives or cosmetics.</div></div></footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

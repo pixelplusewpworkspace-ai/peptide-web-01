@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --clinical-blue: #0083B0;
+    --clinical-light: #F8FAFC;
+    --clinical-border: rgba(226, 232, 240, 0.6);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    background: #ffffff;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-12px) rotate(0.5deg); }
+}
+
+@keyframes float-reverse {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(8px) rotate(-0.3deg); }
+}
+
+.animate-float {
+    animation: float 5s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+    animation: float-reverse 6s ease-in-out infinite;
+}
+
+.blur-overlay {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.clinical-shadow {
+    box-shadow: 0 10px 50px -12px rgba(0, 0, 0, 0.04), 0px 4px 15px -3px rgba(0, 0, 0, 0.02);
+}
+
+.glass-clinical {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--clinical-border);
+}
+
+.product-card-wrap {
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.product-card-wrap:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -15px rgba(2, 132, 199, 0.08);
+}
+
+.back-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: 0;
+    opacity: 0.15;
+}
+
+.btn-gradient {
+    background: linear-gradient(135deg, #0083B0 0%, #00B4DB 100%);
+    transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px -5px rgba(0, 180, 219, 0.3);
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+/* 🌟 Scientific / Neon Motion Graphic Support style sets 🌟 */
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.dash-draw {
+    stroke-linecap: round;
+    animation: dash 3s linear infinite;
+}
+
+.neon-glow {
+    filter: drop-shadow(0 0 8px rgba(0, 180, 219, 0.6));
+}
+
+@keyframes orbit {
+    from { transform: rotate(0deg) translateX(40px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(40px) rotate(-360deg); }
+}
+
+.animate-orbit {
+    animation: orbit 6s linear infinite;
+}
+
+.outline-text {
+    color: transparent;
+    -webkit-text-stroke: 1px #E2E8F0;
+    font-weight: 900;
+}
